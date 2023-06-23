@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+import "timestamp.proto";
+import "course.proto";
+
+option java_package = "com.github.moodletracker.protocol";
+option go_package = "github.com/moodletracker/protocol";
+
+message UpcomingEvent {
+  int32 id = 1;
+  int32 userid = 2;
+  Timestamp timestart = 3; // due date
+  string activityname = 4;
+  Course course = 5;
+}
+
+message UpcomingEventList {
+  repeated UpcomingEvent events = 1;
+}

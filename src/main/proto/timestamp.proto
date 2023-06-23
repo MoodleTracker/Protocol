@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option java_package = "com.github.moodletracker.protocol";
+option go_package = "github.com/moodletracker/protocol";
+
+// The timestamp message is used to represent a point in time.
+// It is represented as the number of seconds since the Unix epoch.
+message Timestamp {
+  // The number of seconds since the Unix epoch.
+  int64 seconds = 1;
+}
